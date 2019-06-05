@@ -64,7 +64,8 @@ class AdminPropertyController extends  AbstractController {
 
      /**
     * @Route ("/admin/{id}  /edit", name="admin.property.edit", methods="GET|POST")
-    * @ param Property $property
+    * @param Property $property
+    * @param Request $request
     * @return \Symfony\Component\HttpFoundation\Response
     **/
     public function edit(Property $property, Request $request)

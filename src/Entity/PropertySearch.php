@@ -19,7 +19,8 @@ use Symfony\Component\Validator\Constraints as Assert;
      * @var ArrayCollection
      */
     private $options;
-    public function __construct()
+    
+     public function __construct()
     {
         $this->options = new ArrayCollection();
     }

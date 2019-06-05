@@ -2,6 +2,7 @@
 namespace App\Form;
 
 use App\Entity\Property;
+use App\Entity\Options;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -23,12 +24,12 @@ class PropertyType extends AbstractType
             ->add('heat', ChoiceType::class, [
                 'choices' => $this->getChoices()
             ])
-            // ->add('options', EntityType::class, [
-            //     'class' => Option::class,
-            //     'required' => false,
-            //     'choice_label' => 'name',
-            //     'multiple' => true
-            // ])
+            ->add('options', EntityType::class, [
+                'class' => Options::class,
+                'required' => false,
+                'choice_label' => 'name',
+                'multiple' => true
+            ])
             // ->add('imageFile', FileType::class, [
             //     'required' => false
             // ])
